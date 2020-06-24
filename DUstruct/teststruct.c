@@ -46,7 +46,7 @@ int main()
 	DH_Protocol a;
 	a.version=MsgVersion;
 	a.type=SENDPAR;
-	printf("hello\n");
+	printf("hello.I am student.\n");
     printf("version:%i,type:%i \n",a.version,a.type);
 	
 	/*test2 block
