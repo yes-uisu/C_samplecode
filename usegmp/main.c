@@ -1,6 +1,11 @@
 /*
-请按照要求加入文件头
+如何使用GMP库的最简单示例
+
+Author：李晓峰
+Date：2020.7.1
+web：http://buuer_xxtxiaofeng.gitee.io/lxf/
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 /*在一些编译环境中，如IDE中，需在linker settings 中加入需要链接的库"*.a"

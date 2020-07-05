@@ -1,5 +1,14 @@
 /* This sample code is copying from https://docs.microsoft.com/en-us/windows/win32/winsock/complete-client-code */
 
+/*
+SOCKET发送和接收消息的简单示例。
+客户端示例
+
+Author：李晓峰
+Date：2020.6.4
+web：http://buuer_xxtxiaofeng.gitee.io/lxf/
+*/
+
 #define _WIN32_WINNT  0x501 //NO causes error: undefined reference to `getaddrinfo'
 
 #define WIN32_LEAN_AND_MEAN

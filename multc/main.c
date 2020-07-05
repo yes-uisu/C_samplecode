@@ -1,5 +1,9 @@
 /*
-请按照要求加入文件头
+示例在源代码层次的分模块设计的方法
+
+Author：李晓峰
+Date：2020.7.1
+web：http://buuer_xxtxiaofeng.gitee.io/lxf/
 */
 #include <stdio.h>
 #include <stdlib.h>

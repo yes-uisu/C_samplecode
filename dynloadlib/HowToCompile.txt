@@ -1,0 +1,17 @@
+下面是如何编译示例中的两个动态库d1.so和d2.so
+gcc d1.c -o d1.o -c -fPIC
+gcc d1.o -shared -o d1.so
+
+gcc d2.c -o d2.o -c -fPIC
+gcc d2.o -shared -o d2.so
+
+主函数的编译
+gcc -o test main.c
+
+执行 ：test 1
+结果：I am testfun from d1.so.
+
+执行：test 2
+结果：I am testfun from d2.so.
+
+结果说明：通过参数不同，我们可以看到程序调用了不同动态库。

@@ -1,6 +1,7 @@
 /*
 Author；Lixiaofeng
 Date：2020.6.23
+web：http://buuer_xxtxiaofeng.gitee.io/lxf/
 
 目的：
     此程序时《现代密码学》关于协议数据结构定义的示例程序，对于对结构体的使用不是很熟悉的同学，
