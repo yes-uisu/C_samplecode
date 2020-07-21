@@ -1,0 +1,7 @@
+用下面的编译指令可以按照预想正确执行
+gcc main.c -lgdi32
+
+
+用下面的这条指令编译，执行结果与预想不同
+gcc main.c -mwindows
+这个指令编译有的windows时整个系统的windows

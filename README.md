@@ -41,5 +41,13 @@ C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器�
 定义和使用结构体，此示例初始目的是为准备定义协议结构体数据的同学做参考。
 ##### TCPSenRev
 这是拷贝自微软网站上的示例代码，一个简单的TCP消息传输。
+##### firstGDI
+示例如何使用windows的GDI库，进行绘图，GDI函数可以参考微软网站，给出一个参考链接https://docs.microsoft.com/zh-cn/windows/win32/gdi/windows-gdi
+##### FirstWindow
+示例如何使用C语言创建一个窗体。
+##### getconsoleevent
+示例如何获取windows终端中的键盘事件。
+##### showchineseselffont
+示例点阵字库的原理，HZLIB.bin是一个点阵字库（但是不是windows中使用的标准字库，可以用到嵌入式系统，自己编写显示驱动），程序读取字库，用* 打出汉字。
 
 
