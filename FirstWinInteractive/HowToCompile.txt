@@ -1,0 +1,11 @@
+
+1、先编译菜单，菜单是程序运行时的资源。
+windres myresource.rc myresource.o
+
+2、然后编译.c文件
+gcc -c main.c 
+
+3、然后再运行linker，将二进制文件进行链接。
+gcc main.o myresource.o -o firstwininteractive.exe -lgdi32
+如果此步运行由问题，可以试一试
+gcc main.o myresource.o -mwindows -o firstwininteractive.exe -lgdi32

@@ -1,0 +1,16 @@
+/*
+Noter：李晓峰
+Date：2020.7.21
+web：http://buuer_xxtxiaofeng.gitee.io/lxf/
+Description：
+在这个资源文件中，定义了菜单资源，也可以定义其他资源，比如图标，字符串等。
+*/  
+
+WIN_MENU MENU{
+	POPUP "Filled &Shapes"
+	{
+	  MENUITEM "&Ellipse",   40001
+	  MENUITEM "&Rectangle", 40002
+	  MENUITEM "R&oundRect", 40003
+	}
+}

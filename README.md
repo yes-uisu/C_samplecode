@@ -45,6 +45,18 @@ C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器�
 示例如何使用windows的GDI库，进行绘图，GDI函数可以参考微软网站，给出一个参考链接https://docs.microsoft.com/zh-cn/windows/win32/gdi/windows-gdi
 ##### FirstWindow
 示例如何使用C语言创建一个窗体。
+##### FirstWinTextHello
+示例如何在创建的窗体中输出红色文本。
+##### FirstWinDrawShape
+示例如何在窗体中画一个椭圆。
+##### FirstWinMenu
+示例如何创建一个有菜单的窗体。
+##### FirstWinMenuAct
+示例如何创建一个带菜单的窗体，并且对菜单事件进行响应。
+
+##### FirstWinInteractive
+示例如何使用菜单控制，来用鼠标在窗体中画出不同的填充图。
+
 ##### getconsoleevent
 示例如何获取windows终端中的键盘事件。
 ##### showchineseselffont

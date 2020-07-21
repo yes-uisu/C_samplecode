@@ -1,5 +1,9 @@
 /*
-copy from https://docs.microsoft.com/en-us/windows/win32/learnwin32/your-first-windows-program
+Noter：李晓峰
+Date：2020.7.21
+web：http://buuer_xxtxiaofeng.gitee.io/lxf/
+Description：
+此示例展示如何使用GDI函数，在窗体绘制一个椭圆形。
 */
 
 #ifndef UNICODE
@@ -7,19 +11,10 @@ copy from https://docs.microsoft.com/en-us/windows/win32/learnwin32/your-first-w
 #endif 
 
 #include <windows.h>
+#include <wingdi.h>  
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
-/*在微软网站上给出的例子中，入口函数为：
-	int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
-如果写成这样在用gcc编译时，会出现如下错误提示：
-	C:/MinGW/lib/libmingw32.a(main.o):(.text.startup+0xa0): undefined reference to `WinMain@16'
-	collect2.exe: error: ld returned 1 exit status
-究其原因wWinMain是C++的入口函数，C的应该是WinMain，修改为如下，就可以了
-Noter：李晓峰
-Date：2020.7.9
-web：http://buuer_xxtxiaofeng.gitee.io/lxf/
-*/
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow)
 {
     // Register the window class.
@@ -71,7 +66,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
 
 /*消息处理的回调函数
 Noter：李晓峰
-Date：2020.7.9
+Date：2020.7.21
 web：http://buuer_xxtxiaofeng.gitee.io/lxf/
 */
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -86,6 +81,14 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hwnd, &ps);
             FillRect(hdc, &ps.rcPaint, (HBRUSH) (COLOR_WINDOW+1));
+
+            // Because the default brush is white, select  
+            // a different brush into the device context  
+            // to demonstrate the painting of filled shapes. 
+			//也可以使用CreateSolidBrush函数创建自己的画刷
+            SelectObject(ps.hdc, GetStockObject(GRAY_BRUSH));
+			Ellipse(ps.hdc, 0, 0, 100, 300);
+			 
             EndPaint(hwnd, &ps);
         }
         return 0;
