@@ -3,7 +3,8 @@ Noter：李晓峰
 Date：2020.7.21
 web：http://buuer_xxtxiaofeng.gitee.io/lxf/
 Description:
-这个例子展示如何在终端显示图片，这个图片会一闪而过，这是因为终端在不断刷新，显示的图片马上被刷新掉了。
+这个例子展示如何在终端显示图片。
+程序在windows自带的cmd中显示正常，在其他第三方终端中也许不能显示图片。
 */
 
 #include <windows.h>
@@ -51,8 +52,11 @@ int main(VOID)
     BitBlt(mydc, 0, 0, bm.bmWidth, bm.bmHeight, hdcMem, 0, 0, SRCCOPY);
 	
     SelectObject(hdcMem, hbmOld);
-    DeleteDC(hdcMem);
-		
+	DeleteDC(hdcMem);
+	
+	printf("Pause.Input any char to go.\n");
+	getchar(); //先不退出程序，这样可以看到显示的图片
+    		
     return 0; 
 }
 
