@@ -1,0 +1,5 @@
+可以先编译主程序，可以看出主程序编译时并不依赖动态链接库，只是在运行时去动态加载动态链接库
+gcc -o inject_dll.exe inject_dll.c
+
+编译做为钩子的dll
+gcc testdll.c -shared -o testdll.dll
