@@ -1,0 +1,39 @@
+Author:李晓峰
+Date:2020.7.24
+
+编译为32位程序
+gcc -m32 -o bits32.exe getbits.c
+
+
+编译为64位程序
+在编译64位程序时，因为我的系统在装其他应用时，装了多个版本，一个mingw32，一个msys 1.0，还有msys64，所以在编译64位程序时出现一些问题，尝试了以下很多情况，罗列出来供大家参考。
+
+1、启动msys64-mingw64终端
+尝试1：
+启动后先到程序目录中，注意路径的写法(以下路径是我的程序路径)：
+cd /F/自有数据/北京联合大学/所教课程/C_samplecode/compile64app
+然后编译
+gcc -m64 -o bits64.exe getbits.c -Wl,-rpath=C:/msys64/mingw64/lib
+错误信息：
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:/MinGW/lib/../lib/crt2.o:(.text+0x30c): undefined reference to `__imp____set_app_type'
+
+从错误信息看，其去连接我的另外安装的一个版本MINGW中的库，应该时windows环境变量配置了。
+
+尝试2：
+gcc -m64 -o bits64.exe getbits.c -nostdinc -I/C/msys64/mingw64/x86_64-w64-mingw32/include -nostdlib -L /C/msys64/mingw64/x86_64-w64-mingw32/lib 
+错误信息：
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:\msys64\tmp\ccOwfopE.o:getbits.c:(.text+0x32): undefined reference to `__imp___acrt_iob_func'
+
+很奇怪的错误，查阅发现msys官网的帖子说，应该是版本混乱造成的。
+
+2、启动msys64终端
+编译
+gcc -m64 -o bits64.exe getbits.c 
+
+成功，输入下面的程序，可以正常执行：
+$ ./bits64.exe
+bits:   64
+
+但是在windows的cmd中执行bits64.exe，提示缺少msys-2.0.dll,简单操作，直接从msys64中找到这个dll，拷贝到同目录下，执行成功。
+
+
