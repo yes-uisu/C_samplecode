@@ -1,0 +1,13 @@
+可以先编译主程序，可以看出主程序编译时并不依赖动态链接库，只是在运行时去动态加载动态链接库。
+由于我的操作系统是win 10 64位，所以如果要往系统上挂钩子函数，此钩子函数也必需是64位的，故下面的dll和
+exe均编译位64位应用。
+
+gcc -m64 -o inject_dll.exe inject_dll.c
+
+
+编译做为钩子的dll
+gcc -m64 testdll.c -shared -o testdll.dll
+
+msys中的程序路径格式示例：
+/F/自有数据/北京联合大学/所教课程/C_samplecode/keyboardHook
+
