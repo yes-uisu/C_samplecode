@@ -1,0 +1,5 @@
+gcc -o enumfont.exe main.c -lgdi32
+
+路径格式示例：
+windows的路径为：F:\自有数据\北京联合大学\所教课程\C_samplecode\EnumFont
+在msys中为：/F/自有数据/北京联合大学/所教课程/C_samplecode/EnumFont

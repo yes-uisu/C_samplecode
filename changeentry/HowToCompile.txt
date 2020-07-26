@@ -32,13 +32,18 @@ Function is secentry,specific entry.
 ，具体设计的过程如下：
 @@@尝试1：
 gcc -c twotry.c
-gcc -o b.exe -nostartfiles -emyentry twotry.c -lc
+gcc -o b.exe -nostartfiles -emyentry twotry.o -lc
+
+注：-lc 是为了链接基本c库。
 
 @@@尝试2：
 gcc -o b.exe -nostartfiles -Wl,-emyentry twotry.c -lc
 
 注意：如果你是32位系统，参数是-e_myentry，到底是那个符号，可以用nm看以下twotry.o
 
+@@@尝试3：
+gcc -c twotry.c
+ld -nostartfiles -emyentry twotry.o -lc
 ========================================================
 nm命令是linux下自带的特定文件分析工具，一般用来检查分析二进制文件、库文件、可执行文件中的符号表，返回二进制文件中各段的信息。
 用法：nm [选项]  [文件名称] ，若未输入文件名，则默认作用于当前路径的a.out文件。     

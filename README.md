@@ -69,6 +69,14 @@ C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器�
 ##### ShowBitmap
 示例如何在终端中显示图片。在windows的自带的cmd中可以正常显示，也许在第三方的终端中无法显示。
 
+##### EnumFont
+这是使用windows API EnumFontFamilies来枚举操作系统内安装的所有字体，
+这里有一个回调函数EnumFamCallBack，当系统每次找到一个字体时，回调
+此函数，此回调函数将字体名在终端打印出来。
+
+##### ShowFont
+示例在窗体选择一个字体，显示文字。
+
 ##### HookMessageBox
 示例修改内存代码的方式，进行函数注入，实现MessageBoxA的钩子函数。
 
