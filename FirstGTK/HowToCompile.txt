@@ -1,0 +1,19 @@
+1. 在msys中安装GTK+库
+pacman -S mingw-w64-x86_64-gtk3
+
+注：
+1、路径转换
+windows路径F:\自有数据\北京联合大学\所教课程\C_samplecode\FirstGTK
+2、在msys中安装GTK在官网https://www.gtk.org的doc中又说明文件。
+
+转换为msys：/F/自有数据/北京联合大学/所教课程/C_samplecode/FirstGTK
+
+2、编译
+
+gcc -o firstgtk.exe main.c `pkg-config --cflags --libs gtk+-3.0`
+或者
+gcc `pkg-config --cflags gtk+-3.0` -o firstgtk.exe main.c `pkg-config --libs gtk+-3.0`
+
+注意：
+1、在这个示例中，我安装的都是64位的，所以msys启动的也是64位终端。
+2、执行此示例需要在msys环境中，如果要在windows下也可执行，需要将相关库拷贝过来，具体过程在官网的doc的compile and distribution中有说明。

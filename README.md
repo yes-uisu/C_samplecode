@@ -48,6 +48,9 @@ C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器�
 这是拷贝自微软网站上的示例代码，一个简单的TCP消息传输。
 ##### firstGDI
 示例如何使用windows的GDI库，进行绘图，GDI函数可以参考微软网站，给出一个参考链接https://docs.microsoft.com/zh-cn/windows/win32/gdi/windows-gdi
+
+##### FirstGTK
+示例如何创建一个GKT-3.0的窗口程序Hello world！这是个GTK官网的示例程序，这个例子的重点是进行GTK开发环境的配置。
 ##### FirstWindow
 示例如何使用C语言创建一个窗体。
 ##### FirstWinTextHello
