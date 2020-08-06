@@ -1,0 +1,21 @@
+此目录中有两个汇编程序，helloworld.s来源于网络上，但是直接在GNU的环境下编译通不过，进行了调整，修改的部分用汉语进行了说明。
+h2.s是将C语言编写的Helloworld编译位汇编语言后，将其调试部分去掉后，形成的汇编程序。
+这两个程序的编译环境均为msys2/mingw32,注意在msys2中需要启动mingw32的console。
+
+1、helloworld.s 的编译
+as -o helloworld.o helloworld.s
+gcc -nostartfiles -o helloworld.exe helloworld.o
+
+注：
+A、在链接阶段使用gcc而不是ld，主要是因为如果使用ld需要你去在命令行指出用的库，而使用gcc，其实际上也是调用ld，但是由于其环境变量已经配好，所以不用指出库的位置，gcc会自己查找。
+B、此程序编译好后，需要在windows的cmd中执行，才会显示hello world
+C、这个程序执行后，无法被删除，说明此汇编程序在退出时有问题，没有遵从windows 的机制。
+
+2、h2.s 的编译
+as -o h2.o h2.s
+gcc -o h2.exe h2.o
+
+注：
+1、路径转换
+windows路径F:\自有数据\北京联合大学\所教课程\C_samplecode\asm-uselib
+转换为msys：/F/自有数据/北京联合大学/所教课程/C_samplecode/asm-uselib
