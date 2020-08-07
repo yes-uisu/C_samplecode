@@ -1,0 +1,6 @@
+gcc -o catcherr main.c 
+
+注：
+1、路径转换
+windows路径F:\自有数据\北京联合大学\所教课程\C_samplecode\catcherr-jmp
+转换为msys：/F/自有数据/北京联合大学/所教课程/C_samplecode/catcherr-jmp

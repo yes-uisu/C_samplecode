@@ -102,3 +102,11 @@ C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器�
 
 ### asm-uselib
 这是一个利用GNU gcc的assembler as 和linker ld做为工具，编写的汇编程序，gas（GNU as）汇编语言为AT&T，所以此程序也是使用这个语法，这个程序调用C库的printf，实现输出Hello world.
+
+### catcherr-jmp
+示例采用jmp的方法，通过宏定义，模拟C++等语言常用的try/catch错误捕获的方法。
+
+### catcherr-assert
+利用C语言的assert宏，抛出错误进行处理的示例。
+
+
