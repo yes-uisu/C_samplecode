@@ -7,6 +7,10 @@
 ## Xiaofeng's web
 http://buuer_xxtxiaofeng.gitee.io/lxf/
 
+## 示例程序仓库
+
+https://gitee.com/buuer_xxtxiaofeng/C_samplecode
+
 ## 编译环境
 C语言最终是要编译为机器码来执行的。
 C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器，或者IDE(把编译器和编辑器集成了)。
