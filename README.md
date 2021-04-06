@@ -113,4 +113,8 @@ C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器�
 ### catcherr-assert
 利用C语言的assert宏，抛出错误进行处理的示例。
 
+### RWTextFile
+一个简单的示例，如何以文本方式读写文件。用的fgetc和fputc，当然还有其他函数，比如fgets和fputs等。
 
+### RWBinaryFile
+一个简单的示例，如何以二进制方式读写文件。
