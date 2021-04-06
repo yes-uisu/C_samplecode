@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>README</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>README</title><link href='file://night/mermaid.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/codeblock.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/sourcemode.dark.css' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
@@ -16,7 +16,6 @@ a:active, a:hover { outline: 0px; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
@@ -25,14 +24,14 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+img { max-width: 100%; vertical-align: middle; }
 button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
 p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
@@ -48,7 +47,7 @@ sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); 
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
+figure > table { margin: 0px !important; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
@@ -83,24 +82,22 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { break-after: avoid; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
   .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
 pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
@@ -144,7 +141,7 @@ a.md-print-anchor { white-space: pre !important; border-width: initial !importan
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
@@ -154,9 +151,6 @@ svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
-@media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
 
 
 /* Flowchart variables */
@@ -567,13 +561,17 @@ g.classGroup line {
 .pieTitleText {
   text-anchor: middle;
   font-size: 25px;
-  fill: #eee;
-}
+  fill: #323D47;
+   }
+
+.slice {
+   }
 
 g.stateGroup text {
+  fill: #eee;
   stroke: none;
   font-size: 10px;
-}
+   }
 
 g.stateGroup circle {
   fill: white !important;
@@ -619,75 +617,9 @@ g.stateGroup line {
   fill: black;
   font-size: 10px;
   font-weight: bold;
-}
+   }
 
-.cluster-label {
-  color:black;
-}
-
-.statediagram-cluster rect {
-  fill: #BDD5EA;
-  stroke: #9370DB; 
-  stroke-width: 1px;
-}
-.statediagram-cluster rect.outer {
-  rx: 5px;
-  ry: 5px;
-}
-.statediagram-state .divider {
-  stroke: #9370DB; 
-}
-
-.statediagram-state .title-state {
-  rx: 5px;
-  ry: 5px;
-}
-.statediagram-cluster.statediagram-cluster .inner {
-  fill: white;
-}
-.statediagram-cluster.statediagram-cluster-alt .inner {
-  fill: #e0e0e0;
-}
-
-.statediagram-cluster .inner {
-  rx:0;
-  ry:0;
-}
-
-.statediagram-state rect.basic {
-  rx: 5px;
-  ry: 5px;
-}
-.statediagram-state rect.divider {
-  stroke-dasharray: 10,10;
-  fill: #efefef;
-}
-
-.note-edge {
-  stroke-dasharray: 5;
-}
-
-.statediagram-note rect {
-  stroke: var(--cluster-border);
-  fill: #fff5ad;
-  stroke-width: 1px;
-  rx: 0;
-  ry: 0;
-}
-
-.node circle.state-start {
-  fill: black;
-  stroke: black;
-}
-.node circle.state-end {
-  fill: black;
-  stroke: white;
-  stroke-width: 1.5
-}
-#statediagram-barbEnd {
-  fill: #9370DB; 
-}
-
+;
 /* CSS Document */
 
 /** code highlight */
@@ -800,7 +732,7 @@ g.stateGroup line {
 .CodeMirror-gutters {
     border-right: none;
 }
-
+;
 /* CSS Document */
 
 /** markdown source **/
@@ -884,19 +816,6 @@ body {
 
 #write {
     max-width: 914px;
-}
-
-
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
-
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
 }
 
 html,
@@ -1163,14 +1082,9 @@ code,
 kbd,
 tt,
 var {
+    background: rgba(0, 0, 0, 0.05);
     font-size: 0.875rem;
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-}
-
-code,
-tt,
-var {
-    background: rgba(0, 0, 0, 0.05);
 }
 
 kbd {
@@ -1837,17 +1751,11 @@ footer.ty-footer {
     color: white;
 }
 
-.export-detail,
-.export-item.active,
-.export-items-list-control {
-    background: #d6d6d4
-}
-
 
 </style>
 </head>
-<body class='typora-export os-windows'>
-<div id='write'  class=''><h1><a name="csamplecode" class="md-header-anchor"></a><span>C_samplecode</span></h1><h2><a name="介绍" class="md-header-anchor"></a><span>介绍</span></h2><p><span>根据在给不同年级授课时的情况，整理一些C语言的示例代码，供大家参考，内容会不断更新。</span>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="csamplecode" class="md-header-anchor"></a><span>C_samplecode</span></h1><h2><a name="介绍" class="md-header-anchor"></a><span>介绍</span></h2><p><span>根据在给不同年级授课时的情况，整理一些C语言的示例代码，供大家参考，内容会不断更新。</span>
 <span>大多数时候，初学者学完C语言后会有一种感觉，那就是是好像都看懂了，练习也做了，但是还是不能去完成一个任务，或者说实际去做些项目。</span>
 <span>这里，需要大家理解，C语言是一门语言，是一门与计算机交互的语言，所以你想要去操作计算机（也就是我们说的做些项目），除了了解C语言本身，你也必需了解你所要操作的计算机给你提供了什么样的操作接口也是非常重要的（这部分以API或者库的形式体现，比如windows API，GNU lib），而大家感觉做不出什么东西，就是因为缺少第二类知识，这部分知识，你最直接的方式是去看相关的官网文档。</span></p><h2><a name="xiaofengs-web" class="md-header-anchor"></a><span>Xiaofeng&#39;s web</span></h2><p><a href='http://buuer_xxtxiaofeng.gitee.io/lxf/' target='_blank' class='url'>http://buuer_xxtxiaofeng.gitee.io/lxf/</a></p><h2><a name="示例程序仓库" class="md-header-anchor"></a><span>示例程序仓库</span></h2><p><a href='https://gitee.com/buuer_xxtxiaofeng/C_samplecode' target='_blank' class='url'>https://gitee.com/buuer_xxtxiaofeng/C_samplecode</a></p><h2><a name="编译环境" class="md-header-anchor"></a><span>编译环境</span></h2><p><span>C语言最终是要编译为机器码来执行的。</span>
 <span>C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器，或者IDE(把编译器和编辑器集成了)。</span>
@@ -1856,9 +1764,9 @@ footer.ty-footer {
 <span>初步判断是预报，理由：</span>
 <span>1、我没有去下马。</span>
 <span>2、源程序没有调别的第三方库。</span>
-<span>3、gcc是从官网上下的。</span></p><h2><a name="示例代码说明" class="md-header-anchor"></a><span>示例代码说明</span></h2><p><span>每一个目录里面都是一个独立的示例代码，下面对仓库中的示例代码进行简单说明。</span></p><h3><a name="helloworld" class="md-header-anchor"></a><span>Helloworld</span></h3><p><span>最简单的示例，输出“Hello C World”，看看基本编译环境是否ok。</span></p><h3><a name="runwithpar" class="md-header-anchor"></a><span>runwithpar</span></h3><p><span>示例如何编写带参数运行的程序，也就是如何在程序中获取这些参数。</span></p><h3><a name="multc" class="md-header-anchor"></a><span>multc</span></h3><p><span>示例如何在源程序级别分模块，就是分为多个.c进行程序设计。</span></p><h3><a name="runcmd" class="md-header-anchor"></a><span>runcmd</span></h3><p><span>示例如何在程序中运行一个命令。</span></p><h3><a name="colortext" class="md-header-anchor"></a><span>colortext</span></h3><p><span>示例如何在windows的终端（console）尽心输出文本的颜色控制。此示例使用的windows API。</span></p><h3><a name="funpointer" class="md-header-anchor"></a><span>FunPointer</span></h3><p><span>示例函数指针的基本定义和使用。</span></p><h3><a name="dynloadlib" class="md-header-anchor"></a><span>dynloadlib</span></h3><p><span>示例如何动态加载一个动态库，并调用动态库中的某个函数，这是设计一些具有动态加载模块系统的重要技术手段。</span></p><h3><a name="lfsr" class="md-header-anchor"></a><span>LFSR</span></h3><p><span>示例如何实现一个最简单的循环移位寄存器，这是流密码实现的关键。</span></p><h3><a name="usegmp" class="md-header-anchor"></a><span>usegmp</span></h3><p><span>示例如何使用大数库，并且示例计算 </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.857ex" height="2.298ex" viewBox="0 -935.7 1660.7 989.6" role="img" focusable="false" style="vertical-align: -0.125ex;"><defs><path stroke-width="0" id="E2-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path stroke-width="0" id="E2-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E2-MJMAIN-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E2-MJMAIN-32" x="0" y="0"></use><g transform="translate(500,392)"><use transform="scale(0.707)" xlink:href="#E2-MJMAIN-31"></use><use transform="scale(0.707)" xlink:href="#E2-MJMAIN-30" x="500" y="0"></use><use transform="scale(0.707)" xlink:href="#E2-MJMAIN-30" x="1000" y="0"></use></g></g></svg></span><script type="math/tex">2^{100}</script><span> 。</span></p><h3><a name="gmpwritefile" class="md-header-anchor"></a><span>gmpwritefile</span></h3><p><span>示例如何进行将大数库计算所得结果写入文件并读出。</span></p><h3><a name="dustruct" class="md-header-anchor"></a><span>DUstruct</span></h3><p><span>定义和使用结构体，此示例初始目的是为准备定义协议结构体数据的同学做参考。</span></p><h3><a name="tcpsenrev" class="md-header-anchor"></a><span>TCPSenRev</span></h3><p><span>这是拷贝自微软网站上的示例代码，一个简单的TCP消息传输。</span></p><h3><a name="firstgdi" class="md-header-anchor"></a><span>firstGDI</span></h3><p><span>示例如何使用windows的GDI库，进行绘图，GDI函数可以参考微软网站，给出一个参考链接</span><a href='https://docs.microsoft.com/zh-cn/windows/win32/gdi/windows-gdi' target='_blank' class='url'>https://docs.microsoft.com/zh-cn/windows/win32/gdi/windows-gdi</a></p><h3><a name="firstgtk" class="md-header-anchor"></a><span>FirstGTK</span></h3><p><span>示例如何创建一个GKT-3.0的窗口程序Hello world！这是个GTK官网的示例程序，这个例子的重点是进行GTK开发环境的配置。</span></p><h3><a name="firstwindow" class="md-header-anchor"></a><span>FirstWindow</span></h3><p><span>示例如何使用C语言创建一个窗体。</span></p><h3><a name="firstwintexthello" class="md-header-anchor"></a><span>FirstWinTextHello</span></h3><p><span>示例如何在创建的窗体中输出红色文本。</span></p><h3><a name="firstwindrawshape" class="md-header-anchor"></a><span>FirstWinDrawShape</span></h3><p><span>示例如何在窗体中画一个椭圆。</span></p><h3><a name="firstwinmenu" class="md-header-anchor"></a><span>FirstWinMenu</span></h3><p><span>示例如何创建一个有菜单的窗体。</span></p><h3><a name="firstwinmenuact" class="md-header-anchor"></a><span>FirstWinMenuAct</span></h3><p><span>示例如何创建一个带菜单的窗体，并且对菜单事件进行响应。</span></p><h3><a name="firstwininteractive" class="md-header-anchor"></a><span>FirstWinInteractive</span></h3><p><span>示例如何使用菜单控制，来用鼠标在窗体中画出不同的填充图。</span></p><h3><a name="getconsoleevent" class="md-header-anchor"></a><span>getconsoleevent</span></h3><p><span>示例如何获取windows终端中的键盘事件。</span></p><h3><a name="showchineseselffont" class="md-header-anchor"></a><span>showchineseselffont</span></h3><p><span>示例点阵字库的原理，HZLIB.bin是一个点阵字库（但是不是windows中使用的标准字库，可以用到嵌入式系统，自己编写显示驱动），程序读取字库，用* 打出汉字。</span></p><h3><a name="winshowbmp" class="md-header-anchor"></a><span>WinShowBMP</span></h3><p><span>示例如何在窗体中显示一个bitmap文件，也就是如何将BMP文件加载到内存中，然后在窗体中绘制出来。</span>
+<span>3、gcc是从官网上下的。</span></p><h2><a name="示例代码说明" class="md-header-anchor"></a><span>示例代码说明</span></h2><p><span>每一个目录里面都是一个独立的示例代码，下面对仓库中的示例代码进行简单说明。</span></p><h3><a name="helloworld" class="md-header-anchor"></a><span>Helloworld</span></h3><p><span>最简单的示例，输出“Hello C World”，看看基本编译环境是否ok。</span></p><h3><a name="runwithpar" class="md-header-anchor"></a><span>runwithpar</span></h3><p><span>示例如何编写带参数运行的程序，也就是如何在程序中获取这些参数。</span></p><h3><a name="multc" class="md-header-anchor"></a><span>multc</span></h3><p><span>示例如何在源程序级别分模块，就是分为多个.c进行程序设计。</span></p><h3><a name="runcmd" class="md-header-anchor"></a><span>runcmd</span></h3><p><span>示例如何在程序中运行一个命令。</span></p><h3><a name="colortext" class="md-header-anchor"></a><span>colortext</span></h3><p><span>示例如何在windows的终端（console）尽心输出文本的颜色控制。此示例使用的windows API。</span></p><h3><a name="funpointer" class="md-header-anchor"></a><span>FunPointer</span></h3><p><span>示例函数指针的基本定义和使用。</span></p><h3><a name="dynloadlib" class="md-header-anchor"></a><span>dynloadlib</span></h3><p><span>示例如何动态加载一个动态库，并调用动态库中的某个函数，这是设计一些具有动态加载模块系统的重要技术手段。</span></p><h3><a name="lfsr" class="md-header-anchor"></a><span>LFSR</span></h3><p><span>示例如何实现一个最简单的循环移位寄存器，这是流密码实现的关键。</span></p><h3><a name="usegmp" class="md-header-anchor"></a><span>usegmp</span></h3><p><span>示例如何使用大数库，并且示例计算 $2^{100}$ 。</span></p><h3><a name="gmpwritefile" class="md-header-anchor"></a><span>gmpwritefile</span></h3><p><span>示例如何进行将大数库计算所得结果写入文件并读出。</span></p><h3><a name="dustruct" class="md-header-anchor"></a><span>DUstruct</span></h3><p><span>定义和使用结构体，此示例初始目的是为准备定义协议结构体数据的同学做参考。</span></p><h3><a name="tcpsenrev" class="md-header-anchor"></a><span>TCPSenRev</span></h3><p><span>这是拷贝自微软网站上的示例代码，一个简单的TCP消息传输。</span></p><h3><a name="firstgdi" class="md-header-anchor"></a><span>firstGDI</span></h3><p><span>示例如何使用windows的GDI库，进行绘图，GDI函数可以参考微软网站，给出一个参考链接</span><a href='https://docs.microsoft.com/zh-cn/windows/win32/gdi/windows-gdi' target='_blank' class='url'>https://docs.microsoft.com/zh-cn/windows/win32/gdi/windows-gdi</a></p><h3><a name="firstgtk" class="md-header-anchor"></a><span>FirstGTK</span></h3><p><span>示例如何创建一个GKT-3.0的窗口程序Hello world！这是个GTK官网的示例程序，这个例子的重点是进行GTK开发环境的配置。</span></p><h3><a name="firstwindow" class="md-header-anchor"></a><span>FirstWindow</span></h3><p><span>示例如何使用C语言创建一个窗体。</span></p><h3><a name="firstwintexthello" class="md-header-anchor"></a><span>FirstWinTextHello</span></h3><p><span>示例如何在创建的窗体中输出红色文本。</span></p><h3><a name="firstwindrawshape" class="md-header-anchor"></a><span>FirstWinDrawShape</span></h3><p><span>示例如何在窗体中画一个椭圆。</span></p><h3><a name="firstwinmenu" class="md-header-anchor"></a><span>FirstWinMenu</span></h3><p><span>示例如何创建一个有菜单的窗体。</span></p><h3><a name="firstwinmenuact" class="md-header-anchor"></a><span>FirstWinMenuAct</span></h3><p><span>示例如何创建一个带菜单的窗体，并且对菜单事件进行响应。</span></p><h3><a name="firstwininteractive" class="md-header-anchor"></a><span>FirstWinInteractive</span></h3><p><span>示例如何使用菜单控制，来用鼠标在窗体中画出不同的填充图。</span></p><h3><a name="getconsoleevent" class="md-header-anchor"></a><span>getconsoleevent</span></h3><p><span>示例如何获取windows终端中的键盘事件。</span></p><h3><a name="showchineseselffont" class="md-header-anchor"></a><span>showchineseselffont</span></h3><p><span>示例点阵字库的原理，HZLIB.bin是一个点阵字库（但是不是windows中使用的标准字库，可以用到嵌入式系统，自己编写显示驱动），程序读取字库，用* 打出汉字。</span></p><h3><a name="winshowbmp" class="md-header-anchor"></a><span>WinShowBMP</span></h3><p><span>示例如何在窗体中显示一个bitmap文件，也就是如何将BMP文件加载到内存中，然后在窗体中绘制出来。</span>
 <span>这是各种图片显示的基础。</span></p><h3><a name="showbitmap" class="md-header-anchor"></a><span>ShowBitmap</span></h3><p><span>示例如何在终端中显示图片。在windows的自带的cmd中可以正常显示，也许在第三方的终端中无法显示。</span></p><h3><a name="enumfont" class="md-header-anchor"></a><span>EnumFont</span></h3><p><span>这是使用windows API EnumFontFamilies来枚举操作系统内安装的所有字体，</span>
 <span>这里有一个回调函数EnumFamCallBack，当系统每次找到一个字体时，回调</span>
-<span>此函数，此回调函数将字体名在终端打印出来。</span></p><h3><a name="showfont" class="md-header-anchor"></a><span>ShowFont</span></h3><p><span>示例在窗体选择一个字体，显示文字。</span></p><h3><a name="hookmessagebox" class="md-header-anchor"></a><span>HookMessageBox</span></h3><p><span>示例修改内存代码的方式，进行函数注入，实现MessageBoxA的钩子函数。</span></p><h3><a name="hookcalc" class="md-header-anchor"></a><span>HookCalc</span></h3><p><span>示例如何利用Windows操作提供的机制，将一个动态连接库的函数，做为钩子函数挂在程序calc.exe的键盘消息处理的钩子上。这个钩子是操作系统为大家准备好的，便于系统扩展，与修改内存代码，进行函数注入的挂钩原理不同。</span></p><h3><a name="compile64app" class="md-header-anchor"></a><span>compile64app</span></h3><p><span>示例对一个简单的程序如何利用gcc编译位32位和64位的，同时此示例程序更加简单类型所占空间，可以看出是32位程序，还是64位程序。</span></p><h3><a name="keyboardhook" class="md-header-anchor"></a><span>keyboardHook</span></h3><p><span>示例如何利用windows 操作系统提供的机制，挂一个全局键盘钩子函数，示例中的钩子函数在一个dll中。</span></p><h3><a name="changeentry" class="md-header-anchor"></a><span>changeentry</span></h3><p><span>示例如何修改缺省的入口函数。</span></p><h3><a name="asm-uselib" class="md-header-anchor"></a><span>asm-uselib</span></h3><p><span>这是一个利用GNU gcc的assembler as 和linker ld做为工具，编写的汇编程序，gas（GNU as）汇编语言为AT&amp;T，所以此程序也是使用这个语法，这个程序调用C库的printf，实现输出Hello world.</span></p><h3><a name="catcherr-jmp" class="md-header-anchor"></a><span>catcherr-jmp</span></h3><p><span>示例采用jmp的方法，通过宏定义，模拟C++等语言常用的try/catch错误捕获的方法。</span></p><h3><a name="catcherr-assert" class="md-header-anchor"></a><span>catcherr-assert</span></h3><p><span>利用C语言的assert宏，抛出错误进行处理的示例。</span></p><p>&nbsp;</p></div>
+<span>此函数，此回调函数将字体名在终端打印出来。</span></p><h3><a name="showfont" class="md-header-anchor"></a><span>ShowFont</span></h3><p><span>示例在窗体选择一个字体，显示文字。</span></p><h3><a name="hookmessagebox" class="md-header-anchor"></a><span>HookMessageBox</span></h3><p><span>示例修改内存代码的方式，进行函数注入，实现MessageBoxA的钩子函数。</span></p><h3><a name="hookcalc" class="md-header-anchor"></a><span>HookCalc</span></h3><p><span>示例如何利用Windows操作提供的机制，将一个动态连接库的函数，做为钩子函数挂在程序calc.exe的键盘消息处理的钩子上。这个钩子是操作系统为大家准备好的，便于系统扩展，与修改内存代码，进行函数注入的挂钩原理不同。</span></p><h3><a name="compile64app" class="md-header-anchor"></a><span>compile64app</span></h3><p><span>示例对一个简单的程序如何利用gcc编译位32位和64位的，同时此示例程序更加简单类型所占空间，可以看出是32位程序，还是64位程序。</span></p><h3><a name="keyboardhook" class="md-header-anchor"></a><span>keyboardHook</span></h3><p><span>示例如何利用windows 操作系统提供的机制，挂一个全局键盘钩子函数，示例中的钩子函数在一个dll中。</span></p><h3><a name="changeentry" class="md-header-anchor"></a><span>changeentry</span></h3><p><span>示例如何修改缺省的入口函数。</span></p><h3><a name="asm-uselib" class="md-header-anchor"></a><span>asm-uselib</span></h3><p><span>这是一个利用GNU gcc的assembler as 和linker ld做为工具，编写的汇编程序，gas（GNU as）汇编语言为AT&amp;T，所以此程序也是使用这个语法，这个程序调用C库的printf，实现输出Hello world.</span></p><h3><a name="catcherr-jmp" class="md-header-anchor"></a><span>catcherr-jmp</span></h3><p><span>示例采用jmp的方法，通过宏定义，模拟C++等语言常用的try/catch错误捕获的方法。</span></p><h3><a name="catcherr-assert" class="md-header-anchor"></a><span>catcherr-assert</span></h3><p><span>利用C语言的assert宏，抛出错误进行处理的示例。</span></p><h3><a name="rwtextfile" class="md-header-anchor"></a><span>RWTextFile</span></h3><p><span>一个简单的示例，如何以文本方式读写文件。用的fgetc和fputc，当然还有其他函数，比如fgets和fputs等。</span></p><h3><a name="rwbinaryfile" class="md-header-anchor"></a><span>RWBinaryFile</span></h3><p><span>一个简单的示例，如何以二进制方式读写文件。</span></p></div>
 </body>
 </html>
