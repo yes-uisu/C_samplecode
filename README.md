@@ -118,3 +118,7 @@ C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器�
 
 ### RWBinaryFile
 一个简单的示例，如何以二进制方式读写文件。
+
+### PrintChinese
+演示如何在windows的终端(terminal)输出汉字。
+
