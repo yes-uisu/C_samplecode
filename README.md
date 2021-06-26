@@ -122,3 +122,9 @@ C语言首先要明确你的编译器，然后选择一个你喜欢的编辑器�
 ### PrintChinese
 演示如何在windows的终端(terminal)输出汉字。
 
+### CPU-endian
+如何检查当前CPU数据存放是采用Big-endian，还是Little-endian。
+
+### ProcessBar
+演示如果编写命令行下的进度条。
+
