@@ -5,11 +5,11 @@
 大多数时候，初学者学完C语言后会有一种感觉，那就是是好像都看懂了，练习也做了，但是还是不能去完成一个任务，或者说实际去做些项目。
 这里，需要大家理解，C语言是一门语言，是一门与计算机交互的语言，所以你想要去操作计算机（也就是我们说的做些项目），除了了解C语言本身，你也必需了解你所要操作的计算机给你提供了什么样的操作接口也是非常重要的（这部分以API或者库的形式体现，比如windows API，GNU lib），而大家感觉做不出什么东西，就是因为缺少第二类知识，这部分知识，你最直接的方式是去看相关的官网文档。
 ## Xiaofeng's web
-http://buuer_xxtxiaofeng.gitee.io/lxf/
+http://uisu.gitee.io/lxf/
 
 ## 示例程序仓库
 
-https://gitee.com/buuer_xxtxiaofeng/C_samplecode
+https://gitee.com/uisu/C_samplecode
 
 ## 编译环境
 C语言最终是要编译为机器码来执行的。

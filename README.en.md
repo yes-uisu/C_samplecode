@@ -3,4 +3,4 @@
 Some C language sample code.
 
 #### Xiaofeng's web
-http://buuer_xxtxiaofeng.gitee.io/lxf/
+http://uisu.gitee.io/lxf/
